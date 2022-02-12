@@ -27,7 +27,7 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true 
 		process.exit(1);
 	});
 
-app.use("/campaigns/", campaignRouter);
+app.use("/campaigns", campaignRouter);
 // throw 404 if URL not found
 app.all("*", function(req, res) {
 var data = {
